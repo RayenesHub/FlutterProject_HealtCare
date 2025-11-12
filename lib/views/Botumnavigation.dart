@@ -44,7 +44,7 @@ class _BotumnavigationState extends State<Botumnavigation> {
         ),
         backgroundColor: Colors.green,
       ),
-      drawer: CustomDrawer(email: emailSharedPref!),
+      drawer: const CustomDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: pageIndex,
         onTap: (value) {

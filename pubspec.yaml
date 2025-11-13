@@ -37,6 +37,9 @@ dependencies:
   sqflite: ^2.3.3
   path: ^1.9.0
   shared_preferences: ^2.0.15
+  flutter_local_notifications: ^19.4.0
+  timezone: ^0.10.1
+  flutter_timezone: ^5.0.1
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +56,35 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+  flutter_native_splash: ^2.4.7
+  flutter_launcher_icons: ^0.14.4
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/icon.png
+  min_sdk_android: 21
+  
+flutter_native_splash:
+  android: true
+  ios: true
+
+  color: "#FFFFFF"
+  image: assets/splash.jpg
+  #branding: assets/addinn.png
+
+  branding_bottom_padding_ios: 35
+
+  color_dark: "#332828"
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#332828"
+    image: assets/splash.jpg
+    #branding: assets/addinn.png
+
+
 flutter:
 
   # The following line ensures that the Material Icons font is
@@ -62,8 +94,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/
-  #   - images/a_dot_ham.jpeg
+    - assets/icon.png
+    - assets/wellcare.png
+    - assets/splash.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

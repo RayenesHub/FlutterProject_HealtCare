@@ -72,7 +72,7 @@ class _BotumnavigationState extends State<Botumnavigation> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.self_improvement_sharp), label:"Activité Physique"),
           BottomNavigationBarItem(icon: Icon(Icons.water_drop_rounded), label:"Hydratation" ),
-          BottomNavigationBarItem(icon: Icon(Icons.data_object), label: "Objectifs"),
+          BottomNavigationBarItem(icon: Icon(Icons.task_rounded), label: "Objectifs"),
           BottomNavigationBarItem(icon: Icon(Icons.mood), label: "Humeur"),
           BottomNavigationBarItem(icon: Icon(Icons.lunch_dining), label: "Module4"),
         ],

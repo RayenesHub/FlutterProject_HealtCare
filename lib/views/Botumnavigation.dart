@@ -3,7 +3,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 //import 'package:healthcare/views/hydration/hydration_screen.dart';
 
 import '../components/CustomDrawer.dart';
-import 'gratitude/gratitude_screen.dart';
+import 'Humeur/HumeurListScreen.dart';
+import 'activity/ActivityList.dart';
+
+import 'hydration/hydration_screen.dart';
+import 'objectif/objectif_screen.dart';
 
 class Botumnavigation extends StatefulWidget {
   const Botumnavigation({super.key});
@@ -33,16 +37,14 @@ class _BotumnavigationState extends State<Botumnavigation> {
     getEmailFromSharedPref();
   }
 
-  int pageIndex=0;
+  int pageIndex = 0;
 
-  // ✅ Pages alignées avec tes 5 items (Hydratation à l’index 1)
+// ✅ Pages alignées avec le BottomNavigationBar
   final List<Widget> _pages = const [
-    Center(child: Text("Activité Physique", style: TextStyle(fontSize: 18))),
-    //HydrationScreen(), // <- Hydratation
-    Center(child: Text("Dairy", style: TextStyle(fontSize: 18))),
-    GratitudeScreen(),
-    Center(child: Text("Module4", style: TextStyle(fontSize: 18))),
-    Center(child: Text("Module5", style: TextStyle(fontSize: 18))),
+    ActivityList(),
+    HydrationScreen(),
+    ObjectiveScreen(), // Objectifs
+    HumeurListScreen(),
   ];
 
   @override
@@ -68,14 +70,14 @@ class _BotumnavigationState extends State<Botumnavigation> {
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.self_improvement_sharp), label: "Activité Physique"),
-          BottomNavigationBarItem(icon: Icon(Icons.water_drop_rounded), label: "Hydratation"),
-          BottomNavigationBarItem(icon: Icon(Icons.bedtime), label: "Sommeil"),
-          BottomNavigationBarItem(icon: Icon(Icons.ramen_dining), label: "Module4"),
-          BottomNavigationBarItem(icon: Icon(Icons.lunch_dining), label: "Module5"),
+          BottomNavigationBarItem(icon: Icon(Icons.self_improvement_sharp), label:"Activité Physique"),
+          BottomNavigationBarItem(icon: Icon(Icons.water_drop_rounded), label:"Hydratation" ),
+          BottomNavigationBarItem(icon: Icon(Icons.data_object), label: "Objectifs"),
+          BottomNavigationBarItem(icon: Icon(Icons.mood), label: "Humeur"),
+          BottomNavigationBarItem(icon: Icon(Icons.lunch_dining), label: "Module4"),
         ],
       ),
-      //body: interfaces[pageIndex],
     );
   }
+
 }
